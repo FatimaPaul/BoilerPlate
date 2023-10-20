@@ -1,5 +1,5 @@
-import FDatePicker from "./components/FDatePicker";
+import AppRouter from "./config/router";
 
 export default function App() {
-  return <FDatePicker />;
+  return <AppRouter />;
 }
