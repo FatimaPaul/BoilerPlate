@@ -4,14 +4,14 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { getDatabase, onValue, ref, set, push } from "firebase/database";
-import { app } from "./firebaseconfig";
+import { app } from "./firebase";
 
 const auth = getAuth(app);
 const db = getDatabase(app);
 
 export function SignUpMethod(body) {
   return new Promise((resolve, reject) => {
-    if (!body.email || !body.password || !body.username) {
+    if (!body.email || !body.password) {
       reject("Must fill all the fields!");
     } else {
       createUserWithEmailAndPassword(auth, body.email, body.password)

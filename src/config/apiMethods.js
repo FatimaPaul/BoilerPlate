@@ -16,6 +16,6 @@ export const Put = (endpoint, id, body) => {
   return apiHandle.put(`${endpoint}/${id}`, body);
 };
 
-export const Delete = (endpoint, id) => {
+export const FDel = (endpoint, id) => {
   return apiHandle.delete(`${endpoint}/${id}`);
 };

@@ -8,6 +8,7 @@ export default function FInput({
   onchange,
   sx,
   classname,
+  type = "text",
 }) {
   return (
     <TextField
@@ -19,6 +20,7 @@ export default function FInput({
       onChange={onchange}
       sx={sx}
       className={classname}
+      type={type}
     />
   );
 }
