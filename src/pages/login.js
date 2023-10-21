@@ -1,8 +1,10 @@
 import FInput from "../components/FInput";
 import FButton from "../components/FButton";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { LoginMethod } from "../config/firebaseMethods";
+import { imageListClasses } from "@mui/material";
+
 
 export default function Login() {
   const [loginBody, setLoginBody] = useState({});
@@ -11,7 +13,7 @@ export default function Login() {
   function handleLogin() {
     // add your page to navigate
     LoginMethod(loginBody)
-      .then((response) => console.log(response))
+      .then((response) => navigate("/bloodBank"))
       .catch((error) => console.log(error));
   }
 
@@ -19,12 +21,12 @@ export default function Login() {
     <div className="h-body">
       <div className="h-form shadow rounded">
         <form className="form">
-          <h1>Login</h1>
+          <h1 className="text-danger">Login</h1>
           <div className="inp-form">
             <FInput
               label="Email"
               variant="outlined"
-              color="secondary"
+              color="error"
               type="email"
               sx={{ width: "100%" }}
               value={loginBody.email || ""}
@@ -37,7 +39,7 @@ export default function Login() {
             <FInput
               label="Password"
               variant="outlined"
-              color="secondary"
+              color="error"
               type="password"
               sx={{ width: "100%" }}
               value={loginBody.password || ""}
@@ -49,11 +51,14 @@ export default function Login() {
           <div>
             <FButton
               variant="contained"
-              color="secondary"
+              color="error"
               onclick={handleLogin}
             >
               Login
             </FButton>
+          </div>
+          <div className="mt-3">
+          Not registered yet? <span><Link to="/signup"> SignUp</Link></span>
           </div>
         </form>
       </div>

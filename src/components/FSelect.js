@@ -12,11 +12,14 @@ export default function FSelect({
   variant,
   color,
   classname,
+  stated
 }) {
   const [selected, setSelected] = React.useState("");
 
+
   const handleChange = (e) => {
     setSelected(e.target.value);
+    stated(e.target.value);
   };
 
   return (

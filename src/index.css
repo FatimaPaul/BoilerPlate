@@ -9,7 +9,7 @@
 
 .h-form {
   padding: 30px;
-  background-color: rgb(245, 241, 240);
+  background-color: rgb(230, 226, 225);
 }
 
 .form {
@@ -23,6 +23,26 @@
 }
 /* form End */
 
+.bb-body{
+  height: 100vh;
+  width: 100vw;
+}
+
+.bb-nav {
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-form-inp{
+  margin-bottom: 10px;
+}
+
+.wid{
+  margin-left: 20px;
+  width: 40%;
+}
 /* 
 material ui 
 firebase

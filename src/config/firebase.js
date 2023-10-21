@@ -7,13 +7,14 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAdIqTiJiNj_BBYN-LKVoNMtFJSMAaO5OY",
-  authDomain: "quizappreact-d2fe0.firebaseapp.com",
-  projectId: "quizappreact-d2fe0",
-  storageBucket: "quizappreact-d2fe0.appspot.com",
-  messagingSenderId: "164299651281",
-  appId: "1:164299651281:web:dcd70c5fd355dfdbea2df0",
-  measurementId: "G-V65LHYFJRP",
+  apiKey: "AIzaSyDV3Ct2icVwSDiUKvubescMi9gFkCPt5gQ",
+  authDomain: "bloodbankapp-25767.firebaseapp.com",
+  databaseURL: "https://bloodbankapp-25767-default-rtdb.firebaseio.com",
+  projectId: "bloodbankapp-25767",
+  storageBucket: "bloodbankapp-25767.appspot.com",
+  messagingSenderId: "986485101602",
+  appId: "1:986485101602:web:0e4efecc9e30319487a67b",
+  measurementId: "G-TQDRTFV6FD"
 };
 
 // Initialize Firebase
