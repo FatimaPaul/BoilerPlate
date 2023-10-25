@@ -7,7 +7,10 @@ import TableRow from "@mui/material/TableRow";
 
 export default function FTable({ headArray, bodyArray, align }) {
   return (
-    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <Table
+      sx={{ minWidth: 650, border: "1px solid gray" }}
+      aria-label="simple table"
+    >
       <TableHead>
         <TableRow>
           {headArray.map((x, i) => (
@@ -31,9 +34,13 @@ export default function FTable({ headArray, bodyArray, align }) {
               },
             }}
           >
-            {/* <TableCell align={align}>{x.firstName}</TableCell>
+            <TableCell align={align}>{x.firstName}</TableCell>
             <TableCell align={align}>{x.lastName}</TableCell>
-            <TableCell align={align}>{x.fullName}</TableCell> */}
+            <TableCell align={align}>{x.address}</TableCell>
+            <TableCell align={align}>{x.bloodGroup}</TableCell>
+            <TableCell align={align}>{x.rhFactor}</TableCell>
+            <TableCell align={align}>{x.status}</TableCell>
+            <TableCell align={align}>{x.gender}</TableCell>
           </TableRow>
         ))}
       </TableBody>
