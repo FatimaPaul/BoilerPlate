@@ -23,19 +23,23 @@ export default function FAcceptor() {
         onchange={(e) => setSearchVal(e.target.value)}
         onclick={handleSearch}
       />
-      <FTable
-        headArray={[
-          "First Name",
-          "Last Name",
-          "Address",
-          "Blood Group",
-          "RH Factor",
-          "Status",
-          "Gender",
-        ]}
-        align="left"
-        bodyArray={donorArray}
-      />
+      {!SearchVal ? (
+        <FTable
+          headArray={[
+            "First Name",
+            "Last Name",
+            "Address",
+            "Blood Group",
+            "RH Factor",
+            "Status",
+            "Gender",
+          ]}
+          align="left"
+          bodyArray={donorArray}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 }
